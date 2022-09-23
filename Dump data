@@ -1,0 +1,16 @@
+------------------HOW TO dump DATA FROM MONGO CLUSTER TO LOCAL -------------
+UNZIP MONGO DATABASE-TOOLS ZIP
+TO CREATE DUMP =>
+	GOTO UNDER BIN FOLDER:-
+		C:\Users\ADMIN\Downloads\mongodb-database-tools-windows-x86_64-100.5.2 (1)\mongodb-database-tools-windows-x86_64-100.5.2\bin
+CLUSTER URL:- "mongodb+srv://sbs_main:sbsmain123@cluster0.xmea3.mongodb.net/app_sbs?retryWrites=true&w=majority"
+EX:-
+	mongodump mongodb+srv://sbs_main:sbsmain123@cluster0.xmea3.mongodb.net/app_sbs?retryWrites=true&w=majority
+	
+AFTER THIS IT WILL CREATE DUMP FOLDER
+GO TO UNDER DUMP FOLDER AND HIT RESTORE COMMAND:-
+	mongorestore  <connection-string>
+	
+	-- (CONNECTION-STRING = localhostString)
+	
+PASTE THE PATH AFTER CONNECTION STRING WHERE DUMP FOLDER WAS CREATED.

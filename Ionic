@@ -1,0 +1,73 @@
+***Ionic Documentation***
+1. Ionic Project setup with capacitor using react:
+https://www.youtube.com/watch?v=61Ddnm8xwk0
+
+2. Ionic + ReactTS. Commands of downloading ionic and demo of API using reactTS.
+https://www.youtube.com/watch?v=QU8bzFmf-xY
+Run/Build  project
+=> npm run build
+Sync project with capacitor
+=> npx cap sync ios
+=> npx cap sync android
+open project in android studio
+=> ionic capacitor open ios
+=> ionic capacitor open android
+*** Ionic install command with typeScript *** ==> ionic start <folderName of project> --type=react
+
+3. To install the package of ionic with reactjs use command:
+- npm install @ionic/react react-router react-router-dom @types/react-router @types/react-router-dom
+
+4. To install the capacitor package use command:
+- npm install --save @capacitor/core @capacitor/cli
+
+5. Then you have to do the next step by adding following command:
+- npx cap init
+*Add app name : the name of your app which you created in reactjs.
+*Package ID: add the package ID as you like without having space, capitalization or characters. [eg: com.reactionic.com]
+
+6. After intalling the capacitor you have to add following packages in package.json file in scripts after "eject":
+ "android": "npx cap add android",
+ "ios": "npx cap add ios",
+ "electron": "npx cap add electron"
+ 
+7. Then you have to build the project by following npm/yarn command:
+- npm run build
+- yarn build
+
+8. After that you will see the folder "build" in the react app
+   & do make sure that "webDir":"build" in capacitor.config.json file.
+   
+9. Then you have to add folder of ios, android and electron commands:
+- npm install @capacitor/android
+- npm install @capacitor/ios
+- npm install @capacitor/electron
+Note: Make sure you are saving your work because it will get error of "not able to find android/ ios/ electron script"
+
+10. Then run android, ios and electron by following commands:
+- npm run android
+- npm run ios
+
+11. Then add following scripts in package.json file done before:
+"android-open" : "npx cap open android",
+"ios-open" : "npx cap open ios",
+"electron-open" : "npx cap open electron"
+
+12. After that run electron by using following command:
+- npm run electron
+
+13. Add following things in .gitignore file:
+- /android
+- /ios
+- /electron
+- /.gradle
+
+14. Run the command to see the output in android /ios:
+- npm run ios-open
+- npm run android-open
+
+15. Run/Build  project
+=> npm run build
+Sync project with capacitor
+=> npx cap sync android
+open project in android studio
+=> ionic capacitor open android.

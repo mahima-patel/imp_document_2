@@ -1,0 +1,23 @@
+*** How to make restful API ***
+
+Youtube Link: https://www.youtube.com/watch?v=1MTBuP1nfLg
+
+1. Make the directory in any folder of any particular name.
+2. Open terminal in VS code.
+3. Write command [npm init -y] for initiating the project to install package.json.
+4. Install all the dependencies which is required:
+	--> Install express by [npm intall express].
+	--> Install mongoose by [npm i mongoose].
+	--> Install validators by [npm i validator].
+5. Create the src folder and app.js file as shown below:
+	--> src -> app.js
+6. First import the express or make it require for the app.
+7. Than make a new variable named app for express to use its functions and properties.
+8. Than make a root to store the data on the database.
+9. Send the response and listen it from the app.
+10. Server will not take the manual port number so we have to give the process number with condition of OR operator like below:
+	--> process.env.PORT || (write your port number).
+11. See that your connection is successful or not? by consoling the port connection.
+12. Make a folder for database and a file name connection.js in that folder.
+13. Connect mongoose with database with the localhost and port number 27017 with your DB name at the end.
+14. Than check if the connection is successful by consoling it? Is it returning the promise or fulfill?
